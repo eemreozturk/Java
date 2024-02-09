@@ -2,25 +2,25 @@ package org.example;
 
 public class productManager implements IProductService {
 
-    private IbankService _bankService;
+    private IbankService bankService;
 
-    public productManager(bankService bankService) {
-
+    public productManager(IbankService bankService) {
+        this.bankService=bankService;
     }
 
     @Override
-    public void sell(products products, customer customer) {
-        double price = products.price;
-        if (customer.isStudent){
-            price = products.price * 0.9;
+    public void sell(products product, customer customerr) {
+        double price = product.getPrice();
+        if (customerr.isStudent){
+            price = product.getPrice() * 0.9;
         }
-        if (customer.isOfficer){
-            price = products.price * 0.8;
+        if (customerr.isOfficer){
+            price = product.getPrice() * 0.8;
         }
 
         //centralBankService centralbankservice = new centralBankService();
 
-        double price1 = _bankService.convertRate(new currencyRate (1000,1));
+        double price1 = bankService.convertRate(new currencyRate (1000,1));
         System.out.println(price1);
     }
 }

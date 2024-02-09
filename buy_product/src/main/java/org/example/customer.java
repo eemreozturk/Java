@@ -1,10 +1,17 @@
 package org.example;
 
-public class customer implements Icustomer
-{
+public class customer implements Iproducts {
     public int id;
     public String name;
     public boolean isStudent;
+    public boolean isOfficer;
+
+    public customer(int id, String name, boolean isStudent, boolean isOfficer) {
+        this.id = id;
+        this.name = name;
+        this.isStudent = isStudent;
+        this.isOfficer = isOfficer;
+    }
 
     public int getId() {
         return id;
@@ -36,11 +43,7 @@ public class customer implements Icustomer
     public void setOfficer(boolean officer) {
         isOfficer = officer;
     }
-
-    public boolean isOfficer;
 }
 
-interface Icustomer
-{
 
-}
+

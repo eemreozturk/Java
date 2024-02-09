@@ -5,7 +5,12 @@ public class currencyRate{
     public double price;
     public int currency;
 
-    public currencyRate(int price, int currency) {
+    public currencyRate() {
+    }
+
+    public currencyRate(double price, int currency) {
+        this.price = price;
+        this.currency = currency;
     }
 
     public double getPrice() {

@@ -2,14 +2,13 @@ package org.example;
 
 public class products implements Iproducts{
     public int id;
+    public String name;
+    public double price;
 
     public int getId() {
         return id;
     }
 
-    public String getName() {
-        return name;
-    }
 
     public products() {
     }
@@ -18,6 +17,9 @@ public class products implements Iproducts{
         this.id = id;
         this.name = name;
         this.price = price;
+    }
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {
@@ -32,6 +34,5 @@ public class products implements Iproducts{
         this.price = price;
     }
 
-    public String name;
-    public double price;
+
 }
